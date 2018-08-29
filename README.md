@@ -1,18 +1,5 @@
 # vue-chat ~~airchat~~      
 
-### 介绍
-
-这是我的毕设项目，产品功能和页面参照qq，微信，TIM，不完全一样，有些是自己的想法。前后端都自己写。
-感觉是一个挺不错的全栈入门项目，各种交互各种业务逻辑，不花哨，但实用。
-
-对node（koa）和vue学习会挺有帮助，现在开源出来，接下去将继续不断完善😄欢迎star
-
-`更新：` [electron-vue-chat：vue-chat的Electron桌面版本项目地址](https://github.com/aermin/electron-vue-chat)
-
-正在写[react版本](https://github.com/aermin/react-chat)的😄,写完将继续更新功能
-
-### 技术栈：
-
 前端vue，vue-router,vuex ，vue-cli和axios，scss,用rem做了移动端适配，没有用第三方组件。
 后端用koa2，用gulp构建工具实现自动刷新后端代码运行。
 数据库用mysql，基于Token的jwt鉴权机制，用socket.io做双向通信；
@@ -120,16 +107,6 @@
 
 - [x] 发布到线上
 - [x] 修改个人信息  
- 
-> 2018.03.02
-
-- [x] 收到添加好友请求底部tab红点提醒
-
-> 2018.03.20  收拾掉不少bug :-)  
-
-- [x] 迁移成Electron桌面版本的，支持mac和win环境。 ~~（Electron版本将于答辩完开源）~~
-
-已开源：[Electron桌面版本项目地址](https://github.com/aermin/electron-vue-chat)
 
 > 2018.03.25 
 
@@ -171,13 +148,6 @@ npm run start  
 ```js
 npm run dev
 ```
-
-### 打包上线，让所有人都能用到你的产品(非必须)
-
-打包上线前需要对master分支的代码做一些修改。具体怎么修改以及后续如何打包上线，请看我单独写的一篇文章[vue-chat 打包上线小记](https://github.com/aermin/blog/issues/28)，希望对你有帮助。
-
-> 老习惯，代码注释比较详细，需要注释而没有注释的我也尽快补上;
-后面也会写几篇博客来详细介绍本项目，希望更好的帮助到入门的小伙伴(大神请略过，或者给些指导建议😄)
 
 ##### 如果对您有帮助，希望给个start，鼓励我继续更新^ ^
 

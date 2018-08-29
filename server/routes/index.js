@@ -29,13 +29,13 @@
 .get('/get_newfriends', verify, newFriends.getnewFriends) // 获取新朋友通知 ok
 .post('/insert_newfriends', verify, newFriends.insertNewFriends) // 添加我的新好友通知 ok
 .get('/get_group_info', verify, groupChat.getGroupInfo) // 获取群资料 ok
-.get('/group_chat', verify, groupChat.getGroupDetail) // 获取群相关内容
-.post('/group_chat_msg', verify, groupChat.saveGroupMsg) // 保存群信息
-.post('/group_chat_relation', verify, groupChat.addGroupUserRelation) // 群添加成员并返回群成员
+.get('/group_chat', verify, groupChat.getGroupDetail) // 获取群相关内容 ok
+.post('/group_chat_msg', verify, groupChat.saveGroupMsg) // 保存群信息 ok
+.post('/group_chat_relation', verify, groupChat.addGroupUserRelation) // 群添加成员并返回群成员 ok
 .post('/create_group', verify, groupInfo.createGroup) // 建群 ok
 .post('/join_group', verify, groupInfo.joinGroup) // 加入群 ok
-.get('/is_in_group', verify, groupInfo.isInGroup) // 看某个用户是否在某个群中(根据返回的数组长度是不是为零就知道)
-.delete('/exit_group', verify, groupInfo.exitGroup) // 退群
+.get('/is_in_group', verify, groupInfo.isInGroup) // 看某个用户是否在某个群中(根据返回的数组长度是不是为零就知道) ok
+.delete('/exit_group', verify, groupInfo.exitGroup) // 退群 ok
   console.log('router')
 
   module.exports = router
