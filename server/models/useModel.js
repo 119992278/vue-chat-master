@@ -27,6 +27,7 @@ class Schema {
       where: {
         name
       },
+      logging: true,
       attributes: ['id', 'name', 'sex', 'avator', 'place', 'github']
     })
     return userInfo
@@ -35,6 +36,8 @@ class Schema {
     await UserSchema.create({
       'user_name': user.user_name,
       'password': user.password
+    }, {
+      logging: true
     })
     return true
   }
@@ -47,13 +50,15 @@ class Schema {
     }, {
       where: {
         'id': data.user_id
-      }
+      },
+      logging: true
     })
     return true
   }
   static async getUserInfo (id, myId) {
     const userInfo = await sequelize.query('SELECT u.id,u.name,u.sex,u.avator,u.place,u.website,u.github,u.intro,r.remark FROM `user_info` AS u join user_user_relation AS r WHERE u.`id` = ' + id + ' AND r.user_id = ' + myId + ' ANd r.other_user_id = ' + id + '', {
-      type: sequelize.QueryTypes.SELECT
+      type: sequelize.QueryTypes.SELECT,
+      logging: true
     })
     // let userInfo = await UserSchema.findOne({where: {id}})
     return userInfo[0]

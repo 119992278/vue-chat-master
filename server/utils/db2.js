@@ -4,7 +4,7 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
   dialect: 'mysql',
   port: config.port,
   pool: { max: 5, min: 0, idle: 30000 },
-  define: { timestamps: false }
-  // logging: false // 关闭SQL日志
+  define: { timestamps: false },
+  logging: false // 关闭SQL日志
 })
 module.exports = sequelize

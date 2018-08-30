@@ -1,6 +1,6 @@
 /* jshint indent: 2 */
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   return sequelize.define('user_user_relation', {
     id: {
       type: DataTypes.INTEGER(11),
@@ -29,8 +29,12 @@ module.exports = function (sequelize, DataTypes) {
     time: {
       type: DataTypes.INTEGER(11),
       allowNull: false
+    },
+    relationId: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false
     }
   }, {
     tableName: 'user_user_relation'
-  })
-}
+  });
+};

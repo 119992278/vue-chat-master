@@ -37,7 +37,7 @@ router.post('/group_chat_relation', verify, async (ctx) => {
   let groupMember = JSON.parse(JSON.stringify(RowDataPacket))
   let newGroupMember = []
   groupMember.forEach(element => {
-    newGroupMember.push(element.group_member_id)
+    newGroupMember.push(element.group_member_id) 
   })
   ctx.body = {
     success: true,

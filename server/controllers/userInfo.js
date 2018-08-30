@@ -168,7 +168,7 @@ let editorRemark = async (ctx, next) => {
     ctx.body = {
       success: true
     }
-    console.log('修改备注成功')
+    // console.log('修改备注成功')
   }
 })
 		.catch(err => {

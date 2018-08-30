@@ -12,7 +12,7 @@ router.post('/register', async (ctx) => {
   }
   let name = ctx.request.body.name || ''
   let result = await userModel.findUserByName(name)
-  if (result.length > 0) {
+  if (result) {
     ctx.body = {
       success: false,
       message: '用户名已存在'
@@ -95,8 +95,6 @@ router.get('/is_friend', verify, async (ctx) => {
     ctx.query.other_user_id,
     ctx.user_id
   )
-  // const isMyFriend = JSON.parse(JSON.stringify(RowDataPacket1))
-  // const isHisFriend = JSON.parse(JSON.stringify(RowDataPacket2))
   ctx.body = {
     success: true,
     data: {
@@ -108,7 +106,6 @@ router.get('/is_friend', verify, async (ctx) => {
 
 router.put('/update_newfriends', verify, async (ctx) => {
   const res1 = await friendsModel.updateNewFriends(ctx.request.body.from_user, ctx.user_id)
-  console.log('updateNewFriends更新我的新好友通知状态成功')
   ctx.body = {
     success: true
   }
@@ -124,7 +121,7 @@ router.put('/editor_remark', verify, async (ctx) => {
       ctx.body = {
         success: true
       }
-      console.log('修改备注成功')
+      // console.log('修改备注成功')
     }
   })
   .catch(err => {

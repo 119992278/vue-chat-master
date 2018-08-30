@@ -21,7 +21,7 @@ app.use(router.routes());
 (async () => {
   try {
     await sequelize.authenticate().then(() => {
-      console.log('==============数据库连接成功==============')
+      console.log('==============数据库连接成功1==============')
       server.listen(3000)
       console.log('服务器已启动,端口3000')
       io.on('connection', socket => {
