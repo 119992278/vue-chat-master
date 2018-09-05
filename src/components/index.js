@@ -1,8 +1,7 @@
 import Message from './Message/index'
 import MessageBox from './MessageBox/index'
 
-
-const install = function(Vue) {
+const install = function (Vue) {
   Vue.component(Message.name, Message)
   Vue.component(MessageBox.name, MessageBox)
 

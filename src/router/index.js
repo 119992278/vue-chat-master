@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Dialogue from '@/pages/dialogue'
 import Message from '@/pages/Message'
 import Robot from '@/pages/Robot'
 import Me from '@/pages/Me'

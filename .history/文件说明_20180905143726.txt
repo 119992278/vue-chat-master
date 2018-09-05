@@ -2,4 +2,4 @@ socket.io 实现实时聊天.产品功能和页面参照qq，微信，TIM，不�
 
 vue启动:npm run dev.
 koa启动:npm run start.
-数据库地址:server\database\airchat.sql(备注:导入前,要创建同命名数据库))
+数据库地址:server\database

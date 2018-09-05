@@ -22,7 +22,7 @@ import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import { mapGetters } from 'vuex'
 export default {
-  name: 'message123',
+  // name: 'message',
   data () {
     return {
       currentTab: 1

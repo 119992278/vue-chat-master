@@ -123,7 +123,6 @@ export default {
       axios.post('/api/v1/private_save_msg', data).then(res => {
         // 存此条私聊信息到本地
         data.time = toNomalTime(data.time)
-        console.log('saveMsgByDBdata', data)
         this.privateDetail.push(data)
         // this.inputMsg = ''
       })

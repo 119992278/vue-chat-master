@@ -30,21 +30,21 @@
 </template>
 
 <script>
-import axios from "axios"
+import axios from 'axios'
 import {
 	mapGetters
 } from 'vuex'
-  export default {
-    name: 'Footer',
-    props: ['currentTab'],
-    data() {
-      return {
-      }
+export default {
+  name: 'Footer',
+  props: ['currentTab'],
+  data () {
+    return {
+    }
   },
   computed: {
-      ...mapGetters([
-          'tabTipsGetter'
-      ])
+    ...mapGetters([
+      'tabTipsGetter'
+    ])
   }
 }
 </script>
